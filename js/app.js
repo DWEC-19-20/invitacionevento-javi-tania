@@ -14,20 +14,42 @@ function añadirInvitado(event) {
 
     inviteurLi = document.createElement("LI");
     inviteurSpan = document.createElement("span");
-    inviteurLi.appendChild(inviteurSpan);
     nombre = document.createTextNode(document.getElementById("invitado").value);
+    document.getElementById("invitado").value = "";
     inviteurSpan.appendChild(nombre);
     document.getElementById("invitedList").appendChild(inviteurLi);
-    inviteurLabel =document.createElement("label");
-    nombreLabel=document.createTextNode("Confirmed");
+    inviteurLabel = document.createElement("label");
+    nombreLabel = document.createTextNode("Confirmed");
     inviteurLabel.appendChild(nombreLabel);
-    check=document.createElement("INPUT");
-    check.setAttribute("type","checkbox");
-    check.setAttribute("id","confirmation");
+    check = document.createElement("INPUT");
+    check.setAttribute("type", "checkbox");
+    check.setAttribute("id", "confirmation");
     inviteurLabel.appendChild(check);
+    inviteurButt = document.createElement("button");
+    inviteurButt2 = document.createElement("button");
+    inviteurButt.innerHTML = "Edit";
+    inviteurButt2.innerHTML = "Remove";
 
+    inviteurLi.appendChild(inviteurSpan);
     inviteurLi.appendChild(inviteurLabel);
+    inviteurLi.appendChild(inviteurButt);
+    inviteurLi.appendChild(inviteurButt2);
 
     event.preventDefault();
 }
 
+
+
+var checkie= document.querySelectorAll("span label input");
+for (let i=0; i<checkie.length; i++){
+    checkie[i].addEventListener("change", confirmarInvitado);
+    console.log(checkie[i]);
+}
+function confirmarInvitado(event){
+
+    for (let i=0; i<checkie.length; i++){
+        if(checkie[i].checked){
+           console.log("hemos llegado hasta aquí");
+        }
+    }
+}
