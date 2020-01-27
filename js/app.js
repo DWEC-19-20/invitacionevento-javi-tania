@@ -52,6 +52,32 @@ listUl.addEventListener('click', (event) => {
 });
 
 
+listUl.addEventListener('click', (event) => {
+  if (event.target.tagName == 'BUTTON' && event.target.textContent == "Edit") {
+    let li = event.target.parentNode;
+    let span = li.firstChild;
+    span.textContent = "";
+    span = document.createElement("INPUT");
+    span.setAttribute("type", "text");
+    span.setAttribute("placeholder", "Enter para guardar");
+    li.prepend(span);
+    event.target.textContent = "Save";
+
+ 
+  span.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+      let nombre = li.firstChild.value;
+      span = document.createElement("SPAN");
+      span.textContent = nombre;
+      li.prepend(span);
+      li.removeChild(span.nextSibling);
+      event.target.textContent = "Edit";
+    }
+  });
+    } });
+
+
+
 
 
 const checkie = document.querySelector("#confirmation");
