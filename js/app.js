@@ -15,6 +15,7 @@ enviar.addEventListener("click", añadirInvitado);
 function añadirInvitado(event) {
 
     inviteurLi = document.createElement("LI");
+    inviteurLi.setAttribute("class", "notresponded");
     inviteurSpan = document.createElement("span");
     nombre = document.createTextNode(document.getElementById("invitado").value);
     document.getElementById("invitado").value = "";
@@ -86,7 +87,7 @@ listUl.addEventListener('click', (event) => {
                         boton[i].textContent = "Edit";
                     }
                 }
-               
+
             }
         });
     }
@@ -96,7 +97,6 @@ listUl.addEventListener('click', (event) => {
 /* Evento Confirmación */
 
 
-const checkie = document.querySelectorAll("#confirmation");
 
 listUl.addEventListener('change', confirmarInvitado);
 
@@ -120,15 +120,15 @@ function confirmarInvitado(event) {
 const filtro = document.getElementById("filtrar");
 
 filtro.addEventListener("change", () => {
-    
+    let noChecados = document.querySelectorAll(".notresponded");
 
-        for (let i = 0; i < checkie.length; i++) {
-            if (checkie[i].className == "notresponded") {
-                checkie[i].style.display = "none";
-            }
-            else {
-                console.log("uhhhhhh");
-            }
-            
+    if (noChecados != null && event.target.checked) {
+        for (let i = 0; i < noChecados.length; i++) {
+            noChecados[i].style.display = "none";
         }
+    } else {
+        for (let i = 0; i < noChecados.length; i++) {
+            noChecados[i].style.display = "inline";
+        }
+    }
 });
