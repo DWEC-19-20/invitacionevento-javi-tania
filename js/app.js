@@ -15,6 +15,7 @@ enviar.addEventListener("click", añadirInvitado);
 function añadirInvitado(event) {
 
     inviteurLi = document.createElement("LI");
+    inviteurLi.className = "notresponded";
     inviteurSpan = document.createElement("span");
     $nombre = document.getElementById("invitado").value;
     if (repes($nombre))
