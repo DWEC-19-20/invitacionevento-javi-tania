@@ -128,6 +128,11 @@ div > label {
   color: #767676;
 }
 
+.filtro {
+  display: flex;
+  justify-content: end;
+}
+
 /* responded */
 .responded {
   transition: 0.4s;
