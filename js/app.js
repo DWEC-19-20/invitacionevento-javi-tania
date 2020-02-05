@@ -49,7 +49,7 @@ function añadirInvitado(event) {
     event.preventDefault();
 }
 
-/* Función para no poder nitroducir un nombre en blanco ni un repetido */
+/* Función para no poder introducir un nombre en blanco ni un repetido */
 
 
 
