@@ -100,7 +100,8 @@ listUl.addEventListener('click', (event) => {
             if (event.keyCode === 13) {
                 let nombre = li.firstChild.value;
                 if (repes(nombre)) {
-                    span = document.createElement("SPAN"); for (let i = 0; i < boton.length; i++) {
+                    span = document.createElement("SPAN"); 
+                    for (let i = 0; i < boton.length; i++) {
                         if (boton[i].textContent == "Save") {
                             boton[i].textContent = "Edit";
                         }
@@ -115,7 +116,7 @@ listUl.addEventListener('click', (event) => {
                 li.prepend(span);
                 li.removeChild(span.nextSibling);
 
-
+                document.querySelector('ul').className = "invitedList";
             }
         });
     }
