@@ -396,13 +396,6 @@
       ],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "2a854402-d66c-4e62-885f-1157b0fc4631",
-      "comment": "",
-      "command": "assertAlert",
-      "target": "No metas un nombre vacío o repetido",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "8fdd5107-7f2b-40b7-8093-37513ea89800",
       "comment": "",
       "command": "click",
@@ -425,13 +418,6 @@
         ["xpath=//ul[@id='invitedList']/li[2]/input", "xpath:idRelative"],
         ["xpath=//li[2]/input", "xpath:position"]
       ],
-      "value": ""
-    }, {
-      "id": "66da4a72-84c7-48fc-af5c-b46716970c9e",
-      "comment": "",
-      "command": "assertAlert",
-      "target": "No metas un nombre vacío o repetido",
-      "targets": [],
       "value": ""
     }, {
       "id": "c906c04b-2445-4381-8f7e-01e24730c084",
