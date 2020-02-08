@@ -59,7 +59,8 @@ function repes($nombre) {
     for (let i = 0; i < nombrecitos.length; i++) {
         if ($nombre == nombrecitos[i].textContent || ($nombre === ""))
             return false;
-    } return true;
+    }
+    return true;
 }
 
 
@@ -100,21 +101,21 @@ listUl.addEventListener('click', (event) => {
             if (event.keyCode === 13) {
                 let nombre = li.firstChild.value;
                 if (repes(nombre)) {
-                    span = document.createElement("SPAN"); 
+                    span = document.createElement("SPAN");
                     for (let i = 0; i < boton.length; i++) {
                         if (boton[i].textContent == "Save") {
                             boton[i].textContent = "Edit";
                         }
                     }
-                }
-                else {
+
+                    span.textContent = nombre;
+                    li.prepend(span);
+                    li.removeChild(span.nextSibling);
+
+                } else {
                     alert("No metas un nombre vacío o repetido");
                     event.preventDefault();
                 }
-
-                span.textContent = nombre;
-                li.prepend(span);
-                li.removeChild(span.nextSibling);
 
                 document.querySelector('ul').className = "invitedList";
             }
@@ -139,8 +140,7 @@ function confirmarInvitado(event) {
 
         if (event.target.checked) {
             ul.setAttribute("class", "responded");
-        }
-        else {
+        } else {
             ul.setAttribute("class", "notresponded");
         }
     }
