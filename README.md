@@ -27,3 +27,8 @@ Completa todas las historias utilizando DOM
 
 7) Cómo Administrador del evento querría que no se pudiera repetir el nombre de un invitado al evento ni añadir nombres vacios para evitar errores => Tania. Se ha creado una función que se ejecuta al añadir o al editar que recorre un array que contiene todos los nombres y los comprueba para evitar repeticiones o nombres vacíos.
 
+
+# Tests
+
+Los test los hemos realizado con Selenium IDE para Chrome. Solo hay que ejecutar el archivo incluído en la carpeta test en la extensión de Chrome de Selenium.
+
